@@ -18,7 +18,6 @@ const char destServer[] = "192.168.1.1";
 
 const char* header = "POST /osc/commands/execute HTTP/1.1\r\n"
                            "Host: 192.168.1.1\r\n"
-                           "Accept: */*\r\n"
                            "Content-Type: text/plain;charset=UTF-8\r\n"
                            "Connection: close\r\n";
                            
@@ -30,9 +29,9 @@ const char* sessionStart = "Content-Length: 48\r\n"
                            "\r\n"
                            "{\"name\": \"camera.startSession\",\"parameters\": {}}";
 
-const char* setSettings =  "Content-Length: 133\r\n"
+const char* setSettings =  "Content-Length: 119\r\n"
                            "\r\n"
-                           "{\"name\": \"camera.setOptions\",\"parameters\":{\"sessionId\": \"SID_0001\", \"options\":{\"iso\": 100,\"exposureProgram\": 9,\"sleepDelay\": 65535}}}";
+                           "{\"name\": \"camera.setOptions\",\"parameters\":{\"sessionId\": \"SID_0001\", \"options\":{\"sleepDelay\": 65535,\"offDelay\": 65535}}}";
 
                            
 const char mySSID[] = "THETAXS00259915.OSC";
